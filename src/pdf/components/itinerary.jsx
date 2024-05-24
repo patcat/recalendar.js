@@ -13,6 +13,7 @@ class Itinerary extends React.PureComponent {
 			height: 20,
 			minHeight: 20,
 			padding: '2 0 0 5',
+			lineHeight: 1,
 		},
 	} );
 

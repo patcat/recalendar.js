@@ -61,6 +61,60 @@ class WeekOverviewPage extends React.Component {
 				todo: {
 					fontSize: 10,
 				},
+				todotable: {
+					width: '66.6%',
+					height: '33.5%',
+					flexDirection: 'column',
+				},
+				todotableRow: {
+					border: '1 solid black',
+					borderRight: 'none',
+					marginTop: -1,
+					marginLeft: -1,
+					textDecoration: 'none',
+					color: 'black',
+					fontSize: 10,
+					display: 'flex',
+					flexDirection: 'row',
+				},
+				todotableColumn: {
+					flexGrow: 1,
+					flexShrink: 1,
+					textDecoration: 'none',
+					color: '#cccccc',
+					fontWeight: 'normal',
+					textAlign: 'center',
+					padding: '2',
+					borderRight: '1 solid black',
+				},
+				todotableColumnLabel: {
+					width: '50%',
+					textDecoration: 'none',
+					color: 'black',
+					fontWeight: 'normal',
+					textAlign: 'center',
+					padding: '2',
+					borderRight: '1 solid black',
+				},
+				todotableColumnTitle: {
+					flexGrow: 1,
+					flexShrink: 1,
+					textDecoration: 'none',
+					color: 'black',
+					fontWeight: 'bold',
+					textAlign: 'center',
+					padding: '2',
+					borderRight: '1 solid black',
+				},
+				todotableColumnTitleLabel: {
+					width: '50%',
+					textDecoration: 'none',
+					color: 'black',
+					fontWeight: 'bold',
+					textAlign: 'left',
+					padding: '2',
+					borderRight: '1 solid black',
+				},
 				specialItem: {
 					fontSize: 10,
 				},
@@ -124,7 +178,29 @@ class WeekOverviewPage extends React.Component {
 
 	renderTodos() {
 		return (
-			<View key={ 'todos' } style={ this.styles.todos }>
+			<View key={ 'todos' } style={ this.styles.todotable }>
+				<View style={ this.styles.todotableRow }>
+					<Text style={ this.styles.todotableColumnTitleLabel }>To Do</Text>
+					<Text style={ this.styles.todotableColumnTitle }>Su</Text>
+					<Text style={ this.styles.todotableColumnTitle }>Mo</Text>
+					<Text style={ this.styles.todotableColumnTitle }>Tu</Text>
+					<Text style={ this.styles.todotableColumnTitle }>We</Text>
+					<Text style={ this.styles.todotableColumnTitle }>Th</Text>
+					<Text style={ this.styles.todotableColumnTitle }>Fr</Text>
+					<Text style={ this.styles.todotableColumnTitle }>Sa</Text>
+				</View>
+				{[ 0, 1, 2, 3, 4, 5, 6, 7, 8 ].map( ( { id, value } ) => (
+					<View key={ id } style={ this.styles.todotableRow }>
+						<View style={ this.styles.todotableColumnLabel }></View>
+						<Text style={ this.styles.todotableColumn }>Su</Text>
+						<Text style={ this.styles.todotableColumn }>Mo</Text>
+						<Text style={ this.styles.todotableColumn }>Tu</Text>
+						<Text style={ this.styles.todotableColumn }>We</Text>
+						<Text style={ this.styles.todotableColumn }>Th</Text>
+						<Text style={ this.styles.todotableColumn }>Fr</Text>
+						<Text style={ this.styles.todotableColumn }>Sa</Text>
+					</View>
+				) )}
 				{this.props.config.todos.map( ( { id, value } ) => (
 					<Text key={ id } style={ this.styles.todo }>
 						{value}

@@ -20,13 +20,15 @@ function generateFontDefinition( font ) {
 const ARIMO = 'Arimo';
 export const LATO = 'Lato';
 const MONTSERRAT = 'Montserrat';
+const PLAYFAIR_DISPLAY = 'PlayfairDisplay';
 const SOURCE_SERIF_PRO = 'SourceSerifPro';
-export const AVAILABLE_FONTS = [ ARIMO, LATO, MONTSERRAT, SOURCE_SERIF_PRO ];
+export const AVAILABLE_FONTS = [ ARIMO, LATO, MONTSERRAT, PLAYFAIR_DISPLAY, SOURCE_SERIF_PRO ];
 
 const FONT_DEFINITIONS = {
 	...generateFontDefinition( ARIMO ),
 	...generateFontDefinition( LATO ),
 	...generateFontDefinition( MONTSERRAT ),
+	...generateFontDefinition( PLAYFAIR_DISPLAY ),
 	...generateFontDefinition( SOURCE_SERIF_PRO ),
 };
 

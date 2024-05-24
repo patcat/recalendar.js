@@ -32,6 +32,7 @@ class Header extends React.PureComponent {
 				margin: '0 5',
 				fontSize: props.subtitleSize,
 				flex: 1,
+				lineHeight: 1,
 			},
 			title: {
 				textTransform: 'uppercase',
@@ -39,9 +40,10 @@ class Header extends React.PureComponent {
 				justifyContent: 'center',
 				textAlign: 'right',
 				color: 'black',
-				padding: '10 5',
+				padding: '5 5',
 				fontSize: props.titleSize,
 				maxWidth: 165,
+				lineHeight: 1,
 			},
 			arrow: {
 				color: '#AAA',
